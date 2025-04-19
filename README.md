@@ -39,8 +39,6 @@ data["Wind Speed_km/h"].unique()
 data["Wind Speed_km/h"].nunique()
 🌞 Find All Instances of Clear Weather
 python
-Copy
-Edit
 # Using value_counts
 data["Weather"].value_counts()
 
@@ -51,8 +49,6 @@ data[data["Weather"] == "Clear"]
 data.groupby("Weather").get_group("Clear")
 🌪️ Count Times When Wind Speed Was Exactly 4 km/h
 python
-Copy
-Edit
 data[data["Wind Speed_km/h"] == 4]
 🧱 Check for Null Values
 python
@@ -62,28 +58,18 @@ data.isnull().sum()
 data.notnull().sum()
 🏷️ Rename Column: "Weather" to "Weather Condition"
 python
-Copy
-Edit
 data.rename(columns={"Weather": "Weather Condition"}, inplace=True)
 📏 Mean of Visibility
 python
-Copy
-Edit
 data.Visibility_km.mean()
 🧪 Standard Deviation of Pressure
 python
-Copy
-Edit
 data.Press_kPa.std()
 💧 Variance of Relative Humidity
 python
-Copy
-Edit
 data["Rel Hum_%"].var()
 ❄️ Find All Instances When Snow Was Recorded
 python
-Copy
-Edit
 # Using exact match
 data[data["Weather"] == "Snow"]
 
@@ -91,13 +77,9 @@ data[data["Weather"] == "Snow"]
 data[data["Weather"].str.contains("Snow")]
 🔍 Find Instances with Wind Speed > 24 km/h and Visibility = 25 km
 python
-Copy
-Edit
 data[(data["Wind Speed_km/h"] > 24) & (data["Visibility_km"] == 25)]
 📈 Find Min, Max, and Mean for Each Weather Condition
 python
-Copy
-Edit
 data.groupby("Weather").mean()
 data.groupby("Weather").min()
 data.groupby("Weather").max()
